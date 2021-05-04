@@ -3,7 +3,7 @@
 ## Готовый шаблон для интернет-магазина на базе DigiSeller API
 
 **_Сотрудничество (разработка):_** [Telegram](https://t.me/sonicbhf)  
-Демонстрация: https://digiseller-server.herokuapp.com/
+Демонстрация: https://digiseller-client.herokuapp.com/
 
 **_В чём преимущество сервиса?_**
 
