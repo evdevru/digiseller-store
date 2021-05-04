@@ -2,6 +2,8 @@
 
 ## Готовый шаблон для интернет-магазина на базе DigiSeller API
 
+**_Сотрудничество (разработка):_** [Telegram](https://t.me/sonicbhf)
+
 **_В чём преимущество сервиса?_**
 
 1. Не требуется иметь собственный товар
@@ -25,12 +27,14 @@
 5. Модифицируемая цветовая палитра
 6. Минималистичный дизайн
 
+[![Видео с установкой](https://i.imgur.com/Ej91fq4.png)](https://www.youtube.com/watch?v=T8-OGv1erfU)
+
 ## Установка и настройка
 
 Эта инструкция для работы на heroku.  
 В случае использования на VPS потребуется настраивать серверный прокси (например, Nginx)
 
-1. [Скачайте репозиторий](https://github.com/evdevru/casino/archive/refs/heads/main.zip) и разархивируйте
+1. [Скачайте репозиторий](https://github.com/evdevru/digiseller-store/archive/refs/heads/main.zip) и разархивируйте
 2. Установите [Git](https://git-scm.com/download/win), [Heroku](https://devcenter.heroku.com/articles/heroku-cli)
 3. Загеристрируйтесь на [heroku](https://dashboard.heroku.com/) и создайте 2 **_РАЗНЫХ_** проекта (для клиента и сервера)
 
