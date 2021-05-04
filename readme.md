@@ -27,7 +27,7 @@
 5. Модифицируемая цветовая палитра
 6. Минималистичный дизайн
 
-[![Видео с установкой](https://i.imgur.com/Ej91fq4.png)](https://www.youtube.com/watch?v=T8-OGv1erfU)
+[Видео с установкой](https://www.youtube.com/watch?v=T8-OGv1erfU)
 
 ## Установка и настройка
 
