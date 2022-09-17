@@ -80,7 +80,12 @@ class ProductController {
     })._files[0];
     const thumbnailName = `${uuidv4()}.${thumbnail.extname}`;
 
-    await thumbnail.move(Helpers.publicPath("thumbnails"), {
+    const filePath = Helpers.resourcesPath(`uploads/goods`);
+    const filePathFull = Helpers.resourcesPath(
+      `uploads/goods/${thumbnailName}`
+    );
+
+    await thumbnail.move(filePath, {
       overwrite: true,
       name: thumbnailName,
     });
@@ -92,8 +97,8 @@ class ProductController {
     }
     try {
       await imagemagick.resize({
-        srcPath: Helpers.publicPath(`thumbnails/${thumbnailName}`),
-        dstPath: Helpers.publicPath(`thumbnails/${thumbnailName}`),
+        srcPath: filePathFull,
+        dstPath: filePathFull,
         width: 612,
       });
     } catch (e) {}
@@ -102,7 +107,8 @@ class ProductController {
 
     if (images) {
       data.images = [];
-      await images.moveAll(Helpers.publicPath("images"), (file) => {
+      const imagesPath = Helpers.resourcesPath(`uploads/images`);
+      await images.moveAll(imagesPath, (file) => {
         const name = `${uuidv4()}.${file.extname}`;
         data.images.push(name);
         return {
@@ -214,7 +220,12 @@ class ProductController {
     if (thumbnail) {
       const thumbnailName = `${uuidv4()}.${thumbnail.extname}`;
 
-      await thumbnail.move(Helpers.publicPath("thumbnails"), {
+      const filePath = Helpers.resourcesPath(`uploads/goods`);
+      const filePathFull = Helpers.resourcesPath(
+        `uploads/goods/${thumbnailName}`
+      );
+
+      await thumbnail.move(filePath, {
         overwrite: true,
         name: thumbnailName,
       });
@@ -226,8 +237,8 @@ class ProductController {
       }
       try {
         await imagemagick.resize({
-          srcPath: Helpers.publicPath(`thumbnails/${thumbnailName}`),
-          dstPath: Helpers.publicPath(`thumbnails/${thumbnailName}`),
+          srcPath: filePathFull,
+          dstPath: filePathFull,
           width: 612,
         });
       } catch (e) {}
@@ -240,7 +251,8 @@ class ProductController {
 
     if (images) {
       data.images = [];
-      await images.moveAll(Helpers.publicPath("images"), (file) => {
+      const filePath2 = Helpers.resourcesPath(`uploads/images`);
+      await images.moveAll(filePath2, (file) => {
         const name = `${uuidv4()}.${file.extname}`;
         data.images.push(name);
         return {
