@@ -96,11 +96,11 @@ class ProductController {
       });
     }
     try {
-      await imagemagick.resize({
+      /*await imagemagick.resize({
         srcPath: filePathFull,
         dstPath: filePathFull,
         width: 612,
-      });
+      });*/
     } catch (e) {}
     data.thumbnail = thumbnailName;
     const images = request.file("images", { size: "10mb" });
@@ -236,11 +236,11 @@ class ProductController {
         });
       }
       try {
-        await imagemagick.resize({
+        /*await imagemagick.resize({
           srcPath: filePathFull,
           dstPath: filePathFull,
           width: 612,
-        });
+        });*/
       } catch (e) {}
       data.thumbnail = thumbnailName;
     }
